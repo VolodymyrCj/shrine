@@ -1,0 +1,39 @@
+<resources>
+    <string name="shr_app_name">Shrine</string>
+    <string name="shr_hint_username">用户名</string>
+    <string name="shr_hint_password">密码</string>
+    <string name="shr_button_next">下一步</string>
+    <string name="shr_button_cancel">取消</string>
+    <string name="shr_error_password">密码长度至少8位</string>
+    <string name="shr_filter_title">筛选</string>
+    <string name="shr_search_title">搜索</string>
+    <string name="shr_product_title">Title</string>
+    <string name="shr_product_description">Secondary text</string>
+
+    <!-- Shrine backdrop menu labels -->
+    <string name="shr_featured_label">精选</string>
+    <string name="shr_apartment_label">家居</string>
+    <string name="shr_accessories_label">饰品</string>
+    <string name="shr_shoes_label">鞋子</string>
+    <string name="shr_tops_label">上装</string>
+    <string name="shr_bottoms_label">下装</string>
+    <string name="shr_dresses_label">裙装</string>
+    <string name="shr_account_label">我的账户</string>
+
+    <string name="menu_produce_detail_add_cart">加入购物车</string>
+    <string name="menu_produce_detail_favorite">喜欢</string>
+
+    <string name="product_detail_color">颜色</string>
+    <string name="product_detail_select_size">尺码</string>
+    <string name="product_detail_more_detail">详细</string>
+    <string name="product_detail_add_to_cart">加入购物车</string>
+    <string name="product_detail_you_may_like">你可能喜欢</string>
+
+    <string name="shopping_cart_cart">购物车</string>
+    <string name="shopping_cart_count">%1$d 件商品</string>
+    <string name="shopping_cart_total">共计</string>
+    <string name="shopping_cart_subtotal">商品金额</string>
+    <string name="shopping_cart_shipping">运费</string>
+    <string name="shopping_cart_tax">税费</string>
+    <string name="shopping_cart_checkout">结算</string>
+</resources>

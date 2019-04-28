@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<merge xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_featured"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_featured_label"
+        android:button="@null"
+        android:background="@drawable/bg_category"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_apartment"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_apartment_label"
+        android:button="@null"
+        android:background="@drawable/bg_category"/>
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_accessory"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_accessories_label"
+        android:button="@null"
+        android:background="@drawable/bg_category" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_shoe"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_shoes_label"
+        android:button="@null"
+        android:background="@drawable/bg_category" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_top"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_tops_label"
+        android:button="@null"
+        android:background="@drawable/bg_category" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_bottom"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_bottoms_label"
+        android:button="@null"
+        android:background="@drawable/bg_category" />
+
+    <android.support.v7.widget.AppCompatRadioButton
+        android:id="@+id/category_dress"
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_dresses_label"
+        android:button="@null"
+        android:background="@drawable/bg_category" />
+
+    <View
+        android:layout_width="56dp"
+        android:layout_height="1dp"
+        android:layout_margin="16dp"
+        android:background="?android:attr/textColorPrimary" />
+
+    <android.support.design.button.MaterialButton
+        style="@style/Widget.Shrine.Button.TextButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/shr_account_label" />
+
+</merge>

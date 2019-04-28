@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white">
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <android.support.constraint.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.android.volley.toolbox.NetworkImageView
+                android:id="@+id/ivProductDetailImg"
+                android:layout_width="match_parent"
+                android:layout_height="240dp"
+                android:scaleType="centerCrop"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/ivProductDetailBrand"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="12dp"
+                android:src="@drawable/product_brand_test"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProductDetailImg" />
+
+            <TextView
+                android:id="@+id/tvProductDetailBrand"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="LMBRJK"
+                android:textSize="16sp"
+                app:layout_constraintBottom_toBottomOf="@+id/ivProductDetailBrand"
+                app:layout_constraintStart_toEndOf="@+id/ivProductDetailBrand"
+                app:layout_constraintTop_toTopOf="@+id/ivProductDetailBrand" />
+
+            <TextView
+                android:id="@+id/tvProductDetailPrice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="12dp"
+                android:text="$240"
+                android:textSize="24sp"
+                android:fontFamily="monospace"
+                android:textColor="@android:color/black"
+                app:layout_constraintBottom_toBottomOf="@+id/ivProductDetailBrand"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/ivProductDetailBrand" />
+
+            <TextView
+                android:id="@+id/tvProductDetailTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:text="Flow Shirt"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/ivProductDetailBrand" />
+
+            <TextView
+                android:id="@+id/tvProductDetailBrief"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:text="brief introduction."
+                android:textAppearance="@style/TextAppearance.AppCompat.Body1"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvProductDetailTitle" />
+
+            <com.google.codelabs.mdc.java.shrine.view.expansion.ExpansionHeader
+                android:id="@+id/expansionHeaderProduceDetailDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:expansionLayoutId="@id/expansionLayoutProductDetailDetail"
+                app:headerIndicatorId="@id/expandIndicatorProductDetail"
+                android:background="?android:selectableItemBackground"
+                app:layout_constraintTop_toBottomOf="@id/tvProductDetailBrief"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="14sp"
+                    android:textColor="@android:color/black"
+                    android:textAllCaps="true"
+                    android:textStyle="bold"
+                    android:text="@string/product_detail_more_detail"
+                    android:layout_marginTop="12dp"/>
+
+                <ImageButton
+                    android:id="@+id/expandIndicatorProductDetail"
+                    android:layout_width="48dp"
+                    android:layout_height="48dp"
+                    android:padding="12dp"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/product_detail_expansion_indicator"
+                    android:background="@android:color/transparent"/>
+            </com.google.codelabs.mdc.java.shrine.view.expansion.ExpansionHeader>
+
+            <com.google.codelabs.mdc.java.shrine.view.expansion.ExpansionLayout
+                android:id="@+id/expansionLayoutProductDetailDetail"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintTop_toBottomOf="@id/expansionHeaderProduceDetailDetail"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.codelabs.mdc.java.shrine.view.MeasurableTextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Not bad, Do you think so! Try it, you will be the brightest star among your friends."/>
+                </FrameLayout>
+            </com.google.codelabs.mdc.java.shrine.view.expansion.ExpansionLayout>
+
+            <View
+                android:id="@+id/dividerProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/expansionLayoutProductDetailDetail"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/product_detail_select_size"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/dividerProductDetail"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <HorizontalScrollView
+                android:id="@+id/hsvProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"
+                android:scrollbars="none">
+
+                <android.support.design.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    app:singleSelection="true"
+                    app:singleLine="true"
+                    app:chipSpacingHorizontal="12dp">
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="00"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="02"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="04"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="06"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="08"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="10"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="12"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+
+                    <android.support.design.chip.Chip
+                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        app:rippleColor="@android:color/transparent"
+                        app:chipText="14"
+                        app:chipCornerRadius="8dp"
+                        app:chipStrokeColor="@color/selector_product_detail_size"
+                        app:chipStrokeWidth="2dp"
+                        app:chipBackgroundColor="@android:color/transparent"/>
+                </android.support.design.chip.ChipGroup>
+            </HorizontalScrollView>
+
+            <View
+                android:id="@+id/dividerProductDetail1"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/hsvProductDetail"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/product_detail_color"
+                android:textSize="14sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintTop_toBottomOf="@id/dividerProductDetail1"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <RadioGroup
+                android:id="@+id/rgProductDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView1"
+                android:layout_marginTop="24dp"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:background="@drawable/selector_product_detail_black"/>
+
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:background="@drawable/selector_product_detail_yellow"/>
+
+                <RadioButton
+                    android:layout_width="40dp"
+                    android:layout_height="40dp"
+                    android:button="@null"
+                    android:background="@drawable/selector_product_detail_green"/>
+            </RadioGroup>
+
+            <android.support.constraint.ConstraintLayout
+                android:id="@+id/constraintLayout"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:layout_marginTop="36dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/rgProductDetail"
+                android:background="@drawable/bg_product_detail_add_to_cart"
+                android:elevation="4dp">
+
+                <ImageView
+                    android:id="@+id/imageView"
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:src="@drawable/shopping_cart"
+                    app:layout_constraintLeft_toLeftOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintRight_toLeftOf="@id/textView2"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    android:layout_marginRight="12dp"/>
+
+                <TextView
+                    android:id="@+id/textView2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@android:color/black"
+                    android:text="@string/product_detail_add_to_cart"
+                    app:layout_constraintLeft_toRightOf="@id/imageView"
+                    app:layout_constraintRight_toRightOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toBottomOf="parent"/>
+            </android.support.constraint.ConstraintLayout>
+
+            <View
+                android:id="@+id/dividerProductDetail2"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"
+                app:layout_constraintTop_toBottomOf="@id/constraintLayout"
+                android:background="@android:color/darker_gray"/>
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="12dp"
+                android:layout_marginTop="24dp"
+                android:text="@string/product_detail_you_may_like"
+                android:textSize="24sp"
+                android:textColor="@android:color/black"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/dividerProductDetail2" />
+
+            <GridView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/textView3"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="12dp"
+                android:layout_marginTop="24dp"/>
+        </android.support.constraint.ConstraintLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp"
+        android:background="@android:color/transparent">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/app_bar"
+            style="@style/Widget.Shrine.Toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:contentInsetStart="0dp"
+            app:navigationIcon="@drawable/shr_close_menu"
+            android:background="@android:color/transparent"
+            app:layout_scrollFlags="scroll|enterAlways"/>
+    </android.support.design.widget.AppBarLayout>
+</android.support.design.widget.CoordinatorLayout>
